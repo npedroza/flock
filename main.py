@@ -3,6 +3,7 @@ from pathlib import Path
 import ast
 import pandas as pd
 import re
+import shutil
 
 # set up directories
 input_files = Path("files/raw")
