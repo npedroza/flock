@@ -12,6 +12,21 @@ metadata = Path("files/meta")
 REQUIRED_FIELDS = ['name', 'phone', 'location']
 #REQUIRED_FIELDS = ['name', 'phone', 'location','rate','rest_type','dish_liked','reviews_list','cuisines']
 
+#copy csv files to our files/raw directory
+src_dir = '.'
+dst_dir = 'files/raw'
+extension = '.csv'  # or '.txt', '.json', etc.
+
+# Ensure the destination directory exists
+os.makedirs(dst_dir, exist_ok=True)
+
+# Copy files with the specified extension
+for filename in os.listdir(src_dir):
+    if filename.endswith(extension):
+        src_path = os.path.join(src_dir, filename)
+        dst_path = os.path.join(dst_dir, filename)
+        shutil.copy2(src_path, dst_path)
+
 # ensure output directories exist 
 for directory in [files_processed, bad_outputs, metadata]:
     directory.mkdir(parents=True, exist_ok=True)
