@@ -9,7 +9,8 @@ input_files = Path("files/raw")
 files_processed = Path("files/processed")
 bad_outputs = Path("files/bad")
 metadata = Path("files/meta")
-REQUIRED_FIELDS = ['name', 'phone', 'location','rate','rest_type','dish_liked','reviews_list','cuisines']
+REQUIRED_FIELDS = ['name', 'phone', 'location']
+#REQUIRED_FIELDS = ['name', 'phone', 'location','rate','rest_type','dish_liked','reviews_list','cuisines']
 
 # ensure output directories exist 
 for directory in [files_processed, bad_outputs, metadata]:
