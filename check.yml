@@ -1,0 +1,37 @@
+# check.yml
+url:
+  type: str
+
+address:
+  type: str
+
+name:
+  type: str
+  not_null: true
+
+rate:
+  type: str
+
+votes:
+  type: int
+
+phone:
+  type: int
+  not_null: true
+
+location:
+  type: str
+  not_null: true
+
+rest_type:
+  type: str
+
+dish_liked:
+  type: comma_list
+
+cuisines:
+  type: comma_list
+
+reviews_list:
+  type: list
+
