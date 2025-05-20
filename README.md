@@ -13,6 +13,10 @@ or
 Run it as:
 `python3.11 main.py`
 
+This code will generate three outputs files named {data...}.out in the directory "files/processed".
+The metadata will be in the "files/meta" and the bad fields in the "files/bad". The "files/raw" is where the initial CSV files are put before running the validations.
+
+
 As extra, I added a profiling using ydata\_profiling in pandas so that we can check the integrity of the dataframes.
 That is run as an example:
 `python3.11 profiling.py inputfile --output outputname.html`
